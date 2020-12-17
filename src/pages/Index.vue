@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="row justify-center">
-            <q-img src="responsive.png" style='height: 400px; max-width: 800px'/>
+            <q-img src="responsive.png" style='height: auto; max-width: 70%'/>
           </div>
           <div class="bg-white row col-12">
             <p class="q-mt-lg q-mb-lg row col-12 justify-center text-h2">About</p>
