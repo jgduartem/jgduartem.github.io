@@ -2,25 +2,18 @@
  <div>
     <q-layout view="lHh lpr lFf" style="height: 100vh">
       <q-header reveal>
-        <q-toolbar class="bg-dark row">
-          <div class="row col-1">
+        <q-toolbar class="bg-dark row col-12 justify-end">
           <q-item>
-            <q-avatar size="32px" color="deep-purple" text-color="white">JD</q-avatar>
-          </q-item>
-          </div>
-          <div class="row col-11 justify-end">
-            <q-item>
-              <a href="#about">
-                <q-btn class="q-ma-xs q-mr-sm" flat color="grey-3" label="About Me"/>
-              </a>
-              <a href="#projects">
-                <q-btn class="q-ma-xs q-mr-sm" flat color="grey-3" label="Projects"/>
-              </a>
-              <a href="#contact">
-                <q-btn class="q-ma-xs q-mr-sm" flat color="grey-3" label="Contact"/>
-              </a>
-            </q-item>   
-          </div>
+            <a href="#about">
+              <q-btn class="q-ma-xs q-mr-sm" flat color="grey-3" label="About Me"/>
+            </a>
+            <a href="#projects">
+              <q-btn class="q-ma-xs q-mr-sm" flat color="grey-3" label="Projects"/>
+            </a>
+            <a href="#contact">
+              <q-btn class="q-ma-xs q-mr-sm" flat color="grey-3" label="Contact"/>
+            </a>
+          </q-item>   
         </q-toolbar>
       </q-header>
 
@@ -170,7 +163,7 @@
             </div> 
           </div>
 
-          <div id="projects" class="q-pa-md text-center bg-grey-2">
+          <div id="projects" class="q-pa-md text-center bg-grey-2" >
             <h2>Projects</h2>
             <div class="row col-12 justify-center">
               <q-card  id="blured" class="row col-xs-12 col-sm-4 col-md-4 col-lg-4 q-ma-md align-center justify-center" style="height: 400px">
@@ -178,7 +171,7 @@
                 <q-card-section>
                   <div class="text-h6 text-center">Custom CRM</div>
                   <div class="text-body2">CRM from Digital Marketing agency</div>
-                  <q-btn class="q-ma-lg" flat color="deep-purple" label="Learn More" @click="crm = true"/>
+                  <q-btn class="q-ma-lg" flat color="deep-purple" label="See More" @click="crm = true"/>
                 </q-card-section>
               </q-card>
               <q-card id="blured" class="row col-xs-12 col-sm-4 col-md-4 col-lg-4 q-ma-md align-center justify-center" style="height: 400px">
@@ -187,38 +180,40 @@
                   <div class="text-body2 text-center">A Empty Space...</div>
                 </q-card-section>
                 <q-card-section class="flex content-end items-end">
-                  <q-btn class="q-mb-md" flat color="deep-purple" label="Learn More" @click="empty = true"/>
+                  <q-btn class="q-mb-md" flat color="deep-purple" label="See More" @click="empty = true"/>
                 </q-card-section>
               </q-card>
             </div>
           </div>
 
           <q-dialog full-width full-height v-model="crm">
-            <q-card style="height: 800px">
+            <q-card>
               <q-bar class="bg-deep-purple">
                 <q-space />
                 <q-btn dense flat icon="close" color="grey-3" v-close-popup>
                   <q-tooltip>Close</q-tooltip>
                 </q-btn>
               </q-bar>
-              <q-card-section>
-                <div class="q-pa-md">
-                  <q-carousel
-                    swipeable
-                    animated
-                    v-model="slide"
-                    thumbnails
-                    infinite
-                    height="100vh"
-                    width='100vw'
-                  >
-                    <q-carousel-slide :name="1" img-src="Screenshot1.png" style="height: auto; width: 100%" />
-                    <q-carousel-slide :name="2" img-src="Screenshot2.png" style="height: auto; width: 100%" />
-                    <q-carousel-slide :name="3" img-src="Screenshot3.png" style="height: auto; width: 100%" />
-                    <q-carousel-slide :name="4" img-src="Screenshot4.png" style="height: auto; width: 100%" />
-                  </q-carousel>
-                </div>
-              </q-card-section>
+              <q-card class="q-ma-xs" style="height: 100vh">
+                <q-card-section>
+                  <div>
+                    <q-carousel
+                      swipeable
+                      animated
+                      v-model="slide"
+                      thumbnails
+                      infinite
+                      height="100vh"
+                      width='100vw'
+                    >
+                      <q-carousel-slide :name="1" img-src="Screenshot1.png" style="height: auto; width: 100%" />
+                      <q-carousel-slide :name="2" img-src="Screenshot2.png" style="height: auto; width: 100%" />
+                      <q-carousel-slide :name="3" img-src="Screenshot3.png" style="height: auto; width: 100%" />
+                      <q-carousel-slide :name="4" img-src="Screenshot4.png" style="height: auto; width: 100%" />
+                    </q-carousel>
+                  </div>
+                </q-card-section>
+              </q-card>
             </q-card>
           </q-dialog>
 
@@ -235,6 +230,32 @@
               </q-card-section>
             </q-card>
           </q-dialog>
+
+          <div id="contact" class="flex flex-center content-end items-end bg-dark text-grey-3" >
+            <div class="row col-12 justify-between">
+              <q-item clickable >
+                <q-item-section>
+                  <q-icon name="fab fa-twitter" @click="openLink('twitter')" size="24px"/>
+                </q-item-section>
+              </q-item>
+              <q-item clickable >
+                <q-item-section>
+                  <q-icon name="fab fa-instagram" @click="openLink('instagram')" size="24px"/>
+                </q-item-section>
+              </q-item>
+              <q-item clickable >
+                <q-item-section>
+                  <q-icon name="fab fa-linkedin" @click="openLink('linkedin')" size="24px"/>
+                </q-item-section>
+              </q-item>
+              <q-item clickable >
+                <q-item-section>
+                  <q-icon name="fab fa-github" @click="openLink('github')" size="24px"/>
+                </q-item-section>
+              </q-item>
+            </div>
+          </div>
+          <div class="row col-12 text-grey-3 bg-dark justify-center" >Jose Duarte 2020</div>
         </q-page>
       </q-page-container>
     </q-layout>
@@ -261,7 +282,24 @@ export default {
       mongoBar: 0.5,
       slide: 1,
     }
-  }
+  },
+  methods: {
+    openLink(link){
+      switch (link) {
+        case 'instagram':
+          window.open('https://www.instagram.com/_jgduarte');
+          break;
+        case 'twitter':
+          window.open('https://twitter.com/_jgduarte');
+          break;
+        case 'linkedin':
+          window.open('https://www.linkedin.com/in/-jgduarte/');
+          break;
+        case 'github':
+          window.open('https://github.com/jgduartem');
+      }
+    }
+  },
 }
 </script>
 
