@@ -279,7 +279,7 @@ export default {
       vuejsBar: 0.7,
       uiBar: 0.5,
       rubyBar: 0.5,
-      mongoBar: 0.5,
+      mongoBar: 0.6,
       slide: 1,
     }
   },
