@@ -166,7 +166,7 @@
           <div id="projects" class="q-pa-md text-center bg-grey-2" >
             <h2>Projects</h2>
             <div class="row col-12 justify-center">
-              <q-card  id="blured" class="row col-xs-12 col-sm-4 col-md-4 col-lg-4 q-ma-md align-center justify-center" style="height: 400px">
+              <q-card   class="row col-xs-12 col-sm-4 col-md-4 col-lg-4 q-ma-md align-center justify-center" style="height: 400px">
                 <q-img src="Screenshot1.png" style="height: auto; max-width: 100%"/>
                 <q-card-section>
                   <div class="text-h6 text-center">Custom CRM</div>
@@ -174,7 +174,7 @@
                   <q-btn class="q-ma-lg" flat color="deep-purple" label="See More" @click="crm = true"/>
                 </q-card-section>
               </q-card>
-              <q-card id="blured" class="row col-xs-12 col-sm-4 col-md-4 col-lg-4 q-ma-md align-center justify-center" style="height: 400px">
+              <q-card  class="row col-xs-12 col-sm-4 col-md-4 col-lg-4 q-ma-md align-center justify-center" style="height: 400px">
                 <q-card-section class="absolute-center">
                   <div class="text-h6 text-center">Empty</div>
                   <div class="text-body2 text-center">A Empty Space...</div>
