@@ -91,12 +91,17 @@ module.exports = function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Meta'
+      ]
     },
 
     // animations: 'all', // --- includes all animations
     // https://quasar.dev/options/animations
-    animations: [],
+    animations: [
+      "fadeInLeft",
+      'fadeInRight'
+    ],
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr
     ssr: {
