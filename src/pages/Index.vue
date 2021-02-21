@@ -19,11 +19,11 @@
 
       <q-page-container>
         <q-page class="">
-          <div class="flex bg-dark text-grey-4 " style="height: 100vh">
+          <div class="flex bg-dark text-grey-2 " style="height: 100vh">
             <div id='name'>
               <q-intersection>
                 <transition appear enter-active-class="animated fadeInLeft">
-              <h1>Jose Duarte</h1>
+              <h1>José Duarte</h1>
                 </transition>
               </q-intersection>
               <q-intersection>
@@ -176,23 +176,34 @@
           </div>
 
           <div id="projects" class="q-pa-md text-center bg-grey-2" >
-            <h2>Projects</h2>
+            <h2>Services</h2>
             <div class="row col-12 justify-center">
               <q-card   class="row col-xs-12 col-sm-4 col-md-4 col-lg-4 q-ma-md align-center justify-center" style="height: 400px">
-                <q-img src="Screenshot1.png" style="height: auto; max-width: 100%"/>
+                <q-img src="portfolio.png" style="height: auto; max-width: 100%"/>
                 <q-card-section>
-                  <div class="text-h6 text-center">Custom CRM</div>
-                  <div class="text-body2">CRM from Digital Marketing agency</div>
-                  <q-btn class="q-ma-lg" flat color="deep-purple" label="See More" @click="crm = true"/>
+                  <div class="text-h6 text-center">Web Pages</div>
+                  <div class="text-body2">and landing pages</div>
+                  
                 </q-card-section>
               </q-card>
               <q-card  class="row col-xs-12 col-sm-4 col-md-4 col-lg-4 q-ma-md align-center justify-center" style="height: 400px">
-                <q-card-section class="absolute-center">
-                  <div class="text-h6 text-center">Empty</div>
-                  <div class="text-body2 text-center">A Empty Space...</div>
+                <q-img src="web-devices.png" style="height: auto; max-width: 100%"/>
+                <q-card-section>
+                  <div class="text-h6 text-center">Web Apps</div>
+                  <div class="text-body2 text-center">Responsives </div>
                 </q-card-section>
                 <q-card-section class="flex content-end items-end">
-                  <q-btn class="q-mb-md" flat color="deep-purple" label="See More" @click="empty = true"/>
+                  
+                </q-card-section>
+              </q-card>
+              <q-card  class="row col-xs-12 col-sm-4 col-md-4 col-lg-4 q-ma-md align-center justify-center" style="height: 400px">
+                <q-img src="e-commerce.png" style="height: auto; max-width: 100%"/>
+                <q-card-section>
+                  <div class="text-h6 text-center">E-Commerce</div>
+                  <div class="text-body2 text-center">With shopping cart</div>
+                </q-card-section>
+                <q-card-section class="flex content-end items-end">
+                  
                 </q-card-section>
               </q-card>
             </div>
@@ -247,11 +258,6 @@
             <div class="row col-12 justify-between">
               <q-item clickable >
                 <q-item-section>
-                  <q-icon name="fab fa-twitter" @click="openLink('twitter')" size="24px"/>
-                </q-item-section>
-              </q-item>
-              <q-item clickable >
-                <q-item-section>
                   <q-icon name="fab fa-instagram" @click="openLink('instagram')" size="24px"/>
                 </q-item-section>
               </q-item>
@@ -292,15 +298,12 @@ export default {
       mongoBar: 0.6,
       slide: 1,
     };
-  },    
+  },
   methods: {
     openLink(link) {
       switch (link) {
         case "instagram":
-          window.open("https://www.instagram.com/_jgduarte");
-          break;
-        case "twitter":
-          window.open("https://twitter.com/_jgduarte");
+          window.open("https://www.instagram.com/duar.tech");
           break;
         case "linkedin":
           window.open("https://www.linkedin.com/in/-jgduarte/");
@@ -309,6 +312,118 @@ export default {
           window.open("https://github.com/jgduartem");
       }
     },
+  },
+  mounted() {
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+        },
+        color: {
+          value: "#ffffff",
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000",
+          },
+          polygon: {
+            nb_sides: 5,
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100,
+          },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false,
+          },
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false,
+          },
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "grab",
+          },
+          onclick: {
+            enable: true,
+            mode: "push",
+          },
+          resize: true,
+        },
+        modes: {
+          grab: {
+            distance: 140,
+            line_linked: {
+              opacity: 1,
+            },
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+          push: {
+            particles_nb: 4,
+          },
+          remove: {
+            particles_nb: 2,
+          },
+        },
+      },
+      retina_detect: true,
+    });
   },
 };
 </script>
@@ -361,7 +476,6 @@ a {
   text-decoration: none;
 }
 #particles-js {
-  position: absolute;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
